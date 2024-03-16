@@ -28,7 +28,7 @@ RSpec.describe StringCalculator do
     end
 
     it "throw an exeption when -ve number is present" do
-      expect { StringCalculator.add_method("1,-2,-3") }.to raise_error("negative number not allowed <-2, -3>")
+      expect { StringCalculator.add_method("1,-2,-3") }.to raise_error("negative number not allowed [-2, -3]")
     end
  end
 end
