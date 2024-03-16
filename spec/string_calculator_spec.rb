@@ -21,5 +21,10 @@ RSpec.describe StringCalculator do
     it "handles the sum method for new lines (instead of commas)" do
       expect(StringCalculator.add_method("1\n2,3")).to eq(6)
     end
+
+    it "recognise the different delimiters when string looks like '//[delimeter]\n[numbers]'" do
+      expect(StringCalculator.add_method("//;\n1;2")).to eq(3)
+      expect(StringCalculator.add_method("//*\n1*2*3")).to eq(6)
+    end
  end
 end
