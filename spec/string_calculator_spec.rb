@@ -24,7 +24,7 @@ RSpec.describe StringCalculator do
 
     it "recognise the different delimiters when string looks like '//[delimeter]\n[numbers]'" do
       expect(StringCalculator.add_method("//;\n1;2")).to eq(3)
-      expect(StringCalculator.add_method("//*\n1*2*3")).to eq(6)
+      expect(StringCalculator.add_method("//;\n1;2;3")).to eq(6)
     end
  end
 end
