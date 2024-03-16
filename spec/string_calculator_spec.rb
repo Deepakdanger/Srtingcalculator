@@ -12,10 +12,14 @@ RSpec.describe StringCalculator do
       expect(StringCalculator.add_method("334")).to eq(334)
     end
 
-    it "return the sum of number if string has two numbers" do
+    it "return the sum of number if string has more than one numbers" do
       expect(StringCalculator.add_method("1, 2")).to eq(3)
       expect(StringCalculator.add_method("32, 33")).to eq(65)
       expect(StringCalculator.add_method("334, 334")).to eq(668)
+    end
+
+    it "handles the sum method for new lines (instead of commas)" do
+      expect(StringCalculator.add_method("1\n2,3")).to eq(6)
     end
  end
 end
