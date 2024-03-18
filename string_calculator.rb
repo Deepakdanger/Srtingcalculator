@@ -16,3 +16,6 @@ class StringCalculator
     end
   end
 end
+
+output = StringCalculator.add_method("1,2,5")
+p output
